@@ -1,11 +1,11 @@
-# from frolvlad/alpine-glibc:alpine-3.14
-FROM frolvlad/alpine-glibc:alpine-3.14
+# from frolvlad/alpine-glibc:alpine-3.13
+FROM frolvlad/alpine-glibc:alpine-3.13
 
 # maintainer
 MAINTAINER "rancococ" <rancococ@qq.com>
 
 # set arg info
-ARG ALPINE_VER=v3.14
+ARG ALPINE_VER=v3.13
 ARG USER=app
 ARG GROUP=app
 ARG UID=8888
