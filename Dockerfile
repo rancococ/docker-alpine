@@ -1,17 +1,17 @@
-# from frolvlad/alpine-glibc:alpine-3.10
-FROM frolvlad/alpine-glibc:alpine-3.10
+# from frolvlad/alpine-glibc:alpine-3.14
+FROM frolvlad/alpine-glibc:alpine-3.14
 
 # maintainer
 MAINTAINER "rancococ" <rancococ@qq.com>
 
 # set arg info
-ARG ALPINE_VER=v3.10
+ARG ALPINE_VER=v3.14
 ARG USER=app
 ARG GROUP=app
-ARG UID=888
-ARG GID=888
+ARG UID=8888
+ARG GID=8888
 ARG APP_HOME=/data/app
-ARG GOSU_URL=https://github.com/tianon/gosu/releases/download/1.11/gosu-amd64
+ARG GOSU_URL=https://github.com/tianon/gosu/releases/download/1.14/gosu-amd64
 
 # copy script
 COPY docker-entrypoint.sh /
@@ -54,7 +54,7 @@ ENV TZ "Asia/Shanghai"
 ENV TERM xterm
 
 # set work home
-WORKDIR /data/app
+WORKDIR /data
 
 # expose port 22
 EXPOSE 22
